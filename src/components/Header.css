@@ -1,0 +1,30 @@
+/* Match the logo canvas to its artwork without cropping or changing the asset.
+   This scoped height resolves the global img { height: auto } rule. */
+.choice-header-logo {
+  display: block;
+  width: 92px;
+  height: 92px;
+  max-width: none;
+  object-fit: contain;
+}
+
+@media (min-width: 640px) {
+  .choice-header-logo {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .choice-header-logo {
+    width: 112px;
+    height: 112px;
+  }
+}
+
+/* Keep desktop button typography from inheriting the global button reset. */
+.choice-header-desktop-nav > a,
+.choice-header-desktop-nav > div > button {
+  font-size: 15px;
+  font-weight: 600;
+}
